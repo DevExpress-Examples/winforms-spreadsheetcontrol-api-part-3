@@ -31,9 +31,9 @@
             Me.spreadsheetNameBoxControl1 = New DevExpress.XtraSpreadsheet.SpreadsheetNameBoxControl()
             Me.splitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl()
             Me.splitterControl1 = New DevExpress.XtraEditors.SplitterControl()
-            DirectCast(Me.dockManager1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.spreadsheetNameBoxControl1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.splitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.dockManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.spreadsheetNameBoxControl1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.splitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.splitContainerControl1.SuspendLayout()
             Me.SuspendLayout()
             ' 
@@ -112,9 +112,9 @@
             Me.Controls.Add(Me.splitContainerControl1)
             Me.Name = "DisplayResultControl"
             Me.Size = New System.Drawing.Size(800, 600)
-            DirectCast(Me.dockManager1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.spreadsheetNameBoxControl1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.splitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.dockManager1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.spreadsheetNameBoxControl1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.splitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.splitContainerControl1.ResumeLayout(False)
             Me.ResumeLayout(False)
 

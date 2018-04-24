@@ -19,16 +19,16 @@ Namespace SpreadsheetControl_API_Part03.CodeExamples
             part.CustomXmlPartDocument.AppendChild(elem)
 
             ' Add an XML part created from string.
-            Dim xmlString As String = "<?xml version=""1.0"" encoding=""UTF-8""?>" & ControlChars.CrLf & _
-"                                    <whitepaper>" & ControlChars.CrLf & _
-"                                       <contact>" & ControlChars.CrLf & _
-"                                          <firstname>Roger</firstname>" & ControlChars.CrLf & _
-"                                          <lastname>Edwards</lastname>" & ControlChars.CrLf & _
-"                                          <phone>832-433-0025</phone>" & ControlChars.CrLf & _
-"                                          <address>1657 Wines Lane Houston, TX 77099</address>" & ControlChars.CrLf & _
-"                                       </contact>" & ControlChars.CrLf & _
-"                                       <date>2016-05-18</date>" & ControlChars.CrLf & _
-"                                    </whitepaper>"
+            Dim xmlString As String = "<?xml version=""1.0"" encoding=""UTF-8""?>
+                                    <whitepaper>
+                                       <contact>
+                                          <firstname>Roger</firstname>
+                                          <lastname>Edwards</lastname>
+                                          <phone>832-433-0025</phone>
+                                          <address>1657 Wines Lane Houston, TX 77099</address>
+                                       </contact>
+                                       <date>2016-05-18</date>
+                                    </whitepaper>"
             workbook.CustomXmlParts.Add(xmlString)
 
             ' Add an XML part loaded from a file.
