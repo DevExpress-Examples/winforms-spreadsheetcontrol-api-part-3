@@ -36,7 +36,7 @@ Namespace SpreadsheetControl_API_Part03
 
             For Each match In matches
                 Dim matchString As String = match.ToString()
-                Dim splitter As String = If(matchString.IndexOf(Constants.vbCrLf) >= 0, Constants.vbCrLf, Constants.vbLf)
+                Dim splitter As String = If(matchString.IndexOf(ControlChars.CrLf) >= 0, ControlChars.CrLf, vbLf)
                 Dim lines() As String = match.ToString().Split(New String() { splitter }, StringSplitOptions.None)
 
                 If lines.Length <= 2 Then
