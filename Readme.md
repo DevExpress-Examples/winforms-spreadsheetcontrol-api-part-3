@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [CustomXmlPartActions.cs](./CS/SpreadsheetControl_API_Part03/CodeExamples/CustomXmlPartActions.cs) (VB: [CustomXmlPartActions.vb](./VB/SpreadsheetControl_API_Part03/CodeExamples/CustomXmlPartActions.vb))
+* [DataValidationActions.cs](./CS/SpreadsheetControl_API_Part03/CodeExamples/DataValidationActions.cs) (VB: [DataValidationActions.vb](./VB/SpreadsheetControl_API_Part03/CodeExamples/DataValidationActions.vb))
+* [RowAndColumnActions.cs](./CS/SpreadsheetControl_API_Part03/CodeExamples/RowAndColumnActions.cs) (VB: [RowAndColumnActions.vb](./VB/SpreadsheetControl_API_Part03/CodeExamples/RowAndColumnActions.vb))
+<!-- default file list end -->
 # WinForms SpreadsheetControl API - Part 3
 
 
