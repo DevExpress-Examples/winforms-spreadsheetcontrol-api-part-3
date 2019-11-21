@@ -13,5 +13,10 @@
 <p>- Apply data validation to control the type of data or the values that users enter into a cell<br><br><strong>Starting from v2016 vol.2:</strong><br>- Remove rows and columns that meet the specified condition<br>- Custom XML Parts examples<br><br></p>
 
 <br/>
-
+See also:
+<br/>
+<a href="https://github.com/DevExpress-Examples/winforms-spreadsheetcontrol-api-e4655">WinForms SpreadsheetControl API</a>
+<br/>
+<a href="https://github.com/DevExpress-Examples/winforms-spreadsheetcontrol-api-part-2-e4832">WinForms SpreadsheetControl API - Part 2</a>
+<br/>
 
