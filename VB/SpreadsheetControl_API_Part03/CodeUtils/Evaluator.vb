@@ -101,7 +101,7 @@ Namespace SpreadsheetControl_API_Part03
             Return "RichEditCodeResultViewer.ExampleItem"
         End Function
     End Class
-    #Region "RichEditCSExampleCodeEvaluator"
+    '#Region '"#RichEditCSExampleCodeEvaluator"
     Public Class RichEditCSExampleCodeEvaluator
         Inherits RichEditExampleCodeEvaluator
 
@@ -133,8 +133,8 @@ Namespace SpreadsheetControl_API_Part03
             End Get
         End Property
     End Class
-    #End Region
-    #Region "RichEditVbExampleCodeEvaluator"
+    ' #End Region ' #RichEditCSExampleCodeEvaluator
+    ' #Region '"#RichEditVbExampleCodeEvaluator"
     Public Class RichEditVbExampleCodeEvaluator
         Inherits RichEditExampleCodeEvaluator
 
@@ -166,7 +166,7 @@ Namespace SpreadsheetControl_API_Part03
             End Get
         End Property
     End Class
-    #End Region
+    ' #End Region '#RichEditVbExampleCodeEvaluator
 
     Public MustInherit Class ExampleEvaluatorByTimer
         Implements IDisposable

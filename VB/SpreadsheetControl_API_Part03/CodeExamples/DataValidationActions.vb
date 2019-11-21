@@ -11,7 +11,7 @@ Namespace SpreadsheetControl_API_Part03
 
 
         Private Shared Sub AddDataValidation(ByVal workbook As IWorkbook)
-'            #Region "#AddDataValidation"
+            '            #Region "#AddDataValidation"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As Worksheet = workbook.Worksheets(0)
             worksheet("C1").SetValue(Date.Now)
@@ -42,15 +42,15 @@ Namespace SpreadsheetControl_API_Part03
 
             ' Highlight data validation ranges.
             worksheet("H4:H9").FillColor = Color.LightGray
-            Dim MyColorScheme() As Integer = { &HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3, &HFFDFC4, &HFFDAE9}
+            Dim MyColorScheme() As Integer = {&HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3, &HFFDFC4, &HFFDAE9}
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(i).Range.FillColor = Color.FromArgb(MyColorScheme(i))
             Next i
-'            #End Region ' #AddDataValidation
+            '            #End Region ' #AddDataValidation
         End Sub
 
         Private Shared Sub ChangeCriteria(ByVal workbook As IWorkbook)
-'            #Region "#ChangeCriteria"
+            '            #Region "#ChangeCriteria"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As Worksheet = workbook.Worksheets(0)
 
@@ -64,15 +64,15 @@ Namespace SpreadsheetControl_API_Part03
             validation.Criteria2 = ValueObject.Empty
 
             ' Highlight data validation ranges.
-            Dim MyColorScheme() As Integer = { &HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3 }
+            Dim MyColorScheme() As Integer = {&HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3}
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(i).Range.FillColor = Color.FromArgb(MyColorScheme(i))
             Next i
-'            #End Region ' #ChangeCriteria
+            '            #End Region ' #ChangeCriteria
         End Sub
 
         Private Shared Sub UseUnionRange(ByVal workbook As IWorkbook)
-'            #Region "#UseUnionRange"
+            '            #Region "#UseUnionRange"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As Worksheet = workbook.Worksheets(0)
 
@@ -82,15 +82,15 @@ Namespace SpreadsheetControl_API_Part03
             worksheet.DataValidations.Add(range, DataValidationType.Decimal, DataValidationOperator.Between, 10, 40)
 
             ' Highlight data validation ranges.
-            Dim MyColorScheme() As Integer = { &HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3 }
+            Dim MyColorScheme() As Integer = {&HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3}
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(i).Range.FillColor = Color.FromArgb(MyColorScheme(i))
             Next i
-'            #End Region ' #UseUnionRange
+            '            #End Region ' #UseUnionRange
         End Sub
 
         Private Shared Sub ShowInputMessage(ByVal workbook As IWorkbook)
-'            #Region "#ShowInputMessage"
+            '            #Region "#ShowInputMessage"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As Worksheet = workbook.Worksheets(0)
 
@@ -103,15 +103,15 @@ Namespace SpreadsheetControl_API_Part03
             validation.ShowInputMessage = True
 
             ' Highlight data validation ranges.
-            Dim MyColorScheme() As Integer = { &HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3 }
+            Dim MyColorScheme() As Integer = {&HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3}
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(i).Range.FillColor = Color.FromArgb(MyColorScheme(i))
             Next i
-'            #End Region ' #ShowInputMessage
+            '            #End Region ' #ShowInputMessage
         End Sub
 
         Private Shared Sub ShowErrorMessage(ByVal workbook As IWorkbook)
-'            #Region "#ShowErrorMessage"
+            '            #Region "#ShowErrorMessage"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As Worksheet = workbook.Worksheets(0)
 
@@ -125,15 +125,15 @@ Namespace SpreadsheetControl_API_Part03
             validation.ShowErrorMessage = True
 
             ' Highlight data validation ranges.
-            Dim MyColorScheme() As Integer = { &HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3 }
+            Dim MyColorScheme() As Integer = {&HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3}
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(i).Range.FillColor = Color.FromArgb(MyColorScheme(i))
             Next i
-'            #End Region ' #ShowErrorMessage
+            '            #End Region ' #ShowErrorMessage
         End Sub
 
         Private Shared Sub GetDataValidation(ByVal workbook As IWorkbook)
-'            #Region "#GetDataValidation"
+            '            #Region "#GetDataValidation"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As Worksheet = workbook.Worksheets(0)
 
@@ -158,15 +158,30 @@ Namespace SpreadsheetControl_API_Part03
             Next d
 
             ' Highlight data validation ranges.
-            Dim MyColorScheme() As Integer = { &HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3 }
+            Dim MyColorScheme() As Integer = {&HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3}
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(i).Range.FillColor = Color.FromArgb(MyColorScheme(i))
             Next i
-'            #End Region ' #GetDataValidation
+            '            #End Region ' #GetDataValidation
         End Sub
 
+        Private Shared Sub ValidateCellValue(ByVal workbook As Workbook)
+            ' #Region '"#ValidateCellValue"
+            workbook.LoadDocument("Documents\DataValidation.xlsx")
+            Dim worksheet As Worksheet = workbook.Worksheets(0)
+
+            ' Add data validations.
+            worksheet.DataValidations.Add(worksheet("D4:D11"), DataValidationType.TextLength, DataValidationOperator.Equal, 3)
+
+            'Check whether the cell value meets the validation criteria:
+            Dim isValid As Boolean = worksheet.DataValidations.Validate(worksheet.Cells("D4"), worksheet.Cells("J4").Value)
+            If isValid Then
+                worksheet("D4").CopyFrom(worksheet("J4"))
+            End If
+            ' #End Region '#ValidateCellValue
+        End Sub
         Private Shared Sub RemoveDataValidation(ByVal workbook As IWorkbook)
-'            #Region "#RemoveDataValidation"
+            '            #Region "#RemoveDataValidation"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As Worksheet = workbook.Worksheets(0)
 
@@ -178,15 +193,15 @@ Namespace SpreadsheetControl_API_Part03
             worksheet.DataValidations.RemoveAt(1)
 
             ' Highlight data validation ranges.
-            Dim MyColorScheme() As Integer = { &HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3 }
+            Dim MyColorScheme() As Integer = {&HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3}
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(i).Range.FillColor = Color.FromArgb(MyColorScheme(i))
             Next i
-'            #End Region ' #RemoveDataValidation
+            '            #End Region ' #RemoveDataValidation
         End Sub
 
         Private Shared Sub RemoveAllDataValidations(ByVal workbook As IWorkbook)
-'            #Region "#RemoveAllDataValidations"
+            '            #Region "#RemoveAllDataValidations"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As Worksheet = workbook.Worksheets(0)
 
@@ -198,11 +213,11 @@ Namespace SpreadsheetControl_API_Part03
             worksheet.DataValidations.Clear()
 
             ' Highlight data validation ranges.
-            Dim MyColorScheme() As Integer = { &HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3 }
+            Dim MyColorScheme() As Integer = {&HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3}
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(i).Range.FillColor = Color.FromArgb(MyColorScheme(i))
             Next i
-'            #End Region ' #RemoveAllDataValidations
+            '            #End Region ' #RemoveAllDataValidations
         End Sub
     End Class
 End Namespace
