@@ -1,14 +1,12 @@
 ﻿using DevExpress.Spreadsheet;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 
-namespace SpreadsheetControl_API_Part03.CodeExamples {
-    class CustomXmlPartActions {
-        static void StoreCustomXmlPart(IWorkbook workbook) {
+namespace SpreadsheetControl_API_Part03.CodeExamples
+{
+    class CustomXmlPartActions
+    {
+        static void StoreCustomXmlPart(IWorkbook workbook)
+        {
             #region #StoreCustomXmlPart
             workbook.Worksheets[0].Cells["A1"].Value = "Custom Xml Test";
 
@@ -41,7 +39,8 @@ namespace SpreadsheetControl_API_Part03.CodeExamples {
             #endregion #StoreCustomXmlPart
         }
 
-        static void ObtainCustomXmlPart(IWorkbook workbook) {
+        static void ObtainCustomXmlPart(IWorkbook workbook)
+        {
             #region #ObtainCustomXmlPart
             workbook.LoadDocument("Documents\\CustomXml.xlsx");
             XmlDocument xmlDoc = workbook.CustomXmlParts[0].CustomXmlPartDocument;
@@ -53,7 +52,8 @@ namespace SpreadsheetControl_API_Part03.CodeExamples {
             #endregion #ObtainCustomXmlPart
         }
 
-        static void ModifyCustomXmlPart(IWorkbook workbook) {
+        static void ModifyCustomXmlPart(IWorkbook workbook)
+        {
             #region #ModifyCustomXmlPart
             workbook.LoadDocument("Documents\\CustomXml.xlsx");
             XmlDocument xmlDoc = workbook.CustomXmlParts[1].CustomXmlPartDocument;

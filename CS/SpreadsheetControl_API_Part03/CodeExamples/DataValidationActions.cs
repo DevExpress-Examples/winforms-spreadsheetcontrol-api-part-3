@@ -167,6 +167,19 @@ namespace SpreadsheetControl_API_Part03
             }
             #endregion #GetDataValidation
         }
+        static void ValidateCellValue(IWorkbook workbook)
+        {
+            #region #ValidateCellValue
+            workbook.LoadDocument("Documents\\DataValidation.xlsx");
+            Worksheet worksheet = workbook.Worksheets[0];
+
+            // Add data validations.
+            worksheet.DataValidations.Add(worksheet["D4:D11"], DataValidationType.TextLength, DataValidationOperator.Equal, 3);
+            //Check whether the cell value meets the validation criteria:
+            bool isValid = worksheet.DataValidations.Validate(worksheet.Cells["D4"], worksheet.Cells["J4"].Value);
+            if (isValid) { worksheet["D4"].CopyFrom(worksheet["J4"]); }
+            #endregion #ValidateCellValue
+        }
 
         static void RemoveDataValidation(IWorkbook workbook) {
             #region #RemoveDataValidation
