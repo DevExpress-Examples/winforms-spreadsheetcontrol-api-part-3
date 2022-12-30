@@ -120,7 +120,7 @@ Namespace SpreadsheetControl_API_Part03
             ' Get data validation entry associated with a particular cell.
             worksheet.DataValidations.GetDataValidation(CType((worksheet.Cells(CStr(("E4")))), DevExpress.Spreadsheet.Cell)).Criteria = DevExpress.Spreadsheet.ValueObject.FromRange(worksheet("H4:H5"))
             ' Get data validation entries for the specified range.
-            Dim myValidation = worksheet.DataValidations.GetDataValidations(worksheet("D4:E11")).Where(Function(d) d.ValidationType = DevExpress.Spreadsheet.DataValidationType.TextLength).SingleOrDefault()
+            Dim myValidation = worksheet.DataValidations.GetDataValidations(worksheet("D4:E11")).SingleOrDefault(Function(d) d.ValidationType = DevExpress.Spreadsheet.DataValidationType.TextLength)
             If myValidation IsNot Nothing Then myValidation.Criteria = 4
             ' Get data validation entries that meet certain criteria.
             For Each d In worksheet.DataValidations.GetDataValidations(DevExpress.Spreadsheet.DataValidationType.TextLength, DevExpress.Spreadsheet.DataValidationOperator.Equal, 4, DevExpress.Spreadsheet.ValueObject.Empty)
