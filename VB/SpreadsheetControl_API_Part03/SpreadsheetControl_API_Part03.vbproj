@@ -153,6 +153,7 @@
       <DependentUpon>DisplayResultControl.vb</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
+      </EmbeddedResource>
       <DependentUpon>Form1.vb</DependentUpon>  
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
