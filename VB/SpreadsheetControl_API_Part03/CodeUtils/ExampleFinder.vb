@@ -6,7 +6,7 @@ Imports System.Text.RegularExpressions
 
 Namespace SpreadsheetControl_API_Part03
 
-'#Region "ExampleFinder"
+#Region "ExampleFinder"
     Public MustInherit Class ExampleFinder
 
         Public isHelper As Boolean = False
@@ -87,8 +87,8 @@ Namespace SpreadsheetControl_API_Part03
         End Function
     End Class
 
-'#End Region
-'#Region "ExampleFinderVB"
+#End Region
+#Region "ExampleFinderVB"
     Public Class ExampleFinderVB
         Inherits ExampleFinder
 
@@ -96,19 +96,19 @@ Namespace SpreadsheetControl_API_Part03
         '}
         Public Overrides ReadOnly Property RegexRegionPattern As String
             Get
-                Return "'#Region.*?'#End Region"
+                Return "#Region.*?#End Region"
             End Get
         End Property
 
         Public Overrides ReadOnly Property RegionStartPattern As String
             Get
-                Return "'#Region ""#"
+                Return "#Region ""#"
             End Get
         End Property
 
         Public Overrides ReadOnly Property RegionHelperStartPattern As String
             Get
-                Return "'#Region ""#@"
+                Return "#Region ""#@"
             End Get
         End Property
 
@@ -133,8 +133,8 @@ Namespace SpreadsheetControl_API_Part03
         End Sub
     End Class
 
-'#End Region
-'#Region "ExampleFinderCSharp"
+#End Region
+#Region "ExampleFinderCSharp"
     Public Class ExampleFinderCSharp
         Inherits ExampleFinder
 
@@ -164,5 +164,5 @@ Namespace SpreadsheetControl_API_Part03
             End If
         End Sub
     End Class
-'#End Region
+#End Region
 End Namespace

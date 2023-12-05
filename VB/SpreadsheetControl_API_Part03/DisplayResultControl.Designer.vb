@@ -19,7 +19,7 @@ Namespace SpreadsheetControl_API_Part03
             MyBase.Dispose(disposing)
         End Sub
 
-'#Region "Component Designer generated code"
+#Region "Component Designer generated code"
         ''' <summary> 
         ''' Required method for Designer support - do not modify 
         ''' the contents of this method with the code editor.
@@ -121,7 +121,7 @@ Namespace SpreadsheetControl_API_Part03
             Me.ResumeLayout(False)
         End Sub
 
-'#End Region
+#End Region
         Private dockManager1 As DevExpress.XtraBars.Docking.DockManager
 
         Private hideContainerLeft As DevExpress.XtraBars.Docking.AutoHideContainer

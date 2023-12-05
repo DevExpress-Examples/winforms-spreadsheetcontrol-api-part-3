@@ -6,7 +6,7 @@ Namespace SpreadsheetControl_API_Part03
     Public Module RowAndColumnActions
 
         Private Sub DeleteRowsBasedOnCondition(ByVal workbook As DevExpress.Spreadsheet.IWorkbook)
-'#Region "#DeleteRowsBasedOnCondition"
+#Region "#DeleteRowsBasedOnCondition"
             workbook.LoadDocument("Documents\Document.xlsx")
             Dim worksheet As DevExpress.Spreadsheet.Worksheet = workbook.Worksheets(0)
             ' Create a function specifying the condition to remove worksheet rows.
@@ -23,11 +23,11 @@ Namespace SpreadsheetControl_API_Part03
             worksheet.Rows.Remove(7, rowRemovalCondition)
         ' Delete rows that meet the specified condition starting from the 5th row to the 14th row.
         'worksheet.Rows.Remove(5, 14, rowRemovalCondition);
-'#End Region  ' #DeleteRowsBasedOnCondition
+#End Region  ' #DeleteRowsBasedOnCondition
         End Sub
 
         Private Sub DeleteColumnssBasedOnCondition(ByVal workbook As DevExpress.Spreadsheet.IWorkbook)
-'#Region "#DeleteColumnsBasedOnCondition"
+#Region "#DeleteColumnsBasedOnCondition"
             workbook.LoadDocument("Documents\Document.xlsx")
             Dim worksheet As DevExpress.Spreadsheet.Worksheet = workbook.Worksheets(0)
             ' Create a function specifying the condition to remove worksheet columns.
@@ -44,7 +44,7 @@ Namespace SpreadsheetControl_API_Part03
             worksheet.Columns.Remove(7, columnRemovalCondition)
         ' Delete columns that meet the specified condition starting from the 5th column to the 14th column.
         'worksheet.Columns.Remove(5, 14, columnRemovalCondition);
-'#End Region  ' #DeleteColumnsBasedOnCondition
+#End Region  ' #DeleteColumnsBasedOnCondition
         End Sub
     End Module
 End Namespace

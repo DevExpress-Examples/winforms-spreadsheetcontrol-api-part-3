@@ -5,7 +5,7 @@ Imports System.Text
 
 Namespace SpreadsheetControl_API_Part03
 
-'#Region "CodeExampleDemoUtils"
+#Region "CodeExampleDemoUtils"
     Public Module CodeExampleDemoUtils
 
         Public Function GatherExamplesFromProject(ByVal examplesPath As String, ByVal language As ExampleLanguage) As Dictionary(Of String, FileInfo)
@@ -115,5 +115,5 @@ Namespace SpreadsheetControl_API_Part03
             Return ExampleLanguage.Csharp
         End Function
     End Module
-'#End Region
+#End Region
 End Namespace

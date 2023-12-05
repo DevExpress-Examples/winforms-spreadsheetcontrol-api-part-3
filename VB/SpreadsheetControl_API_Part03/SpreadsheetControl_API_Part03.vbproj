@@ -57,16 +57,13 @@
     <Reference Include="DevExpress.DataAccess.v23.2.UI, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.DataVisualization.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="DevExpress.TreeMap.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeMap.v23.2.UI, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="DevExpress.XtraTreeMap.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.DataVisualization.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="DevExpress.Docs.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
@@ -146,6 +143,7 @@
   <ItemGroup>
     <Compile Include="CodeExamples\CustomXmlPartActions.vb" />
     <Compile Include="CodeExamples\DataValidationActions.vb" />
+    <Compile Include="CodeExamples\FormControlActions.vb" />
     <Compile Include="CodeExamples\RowAndColumnActions.vb" />
     <Compile Include="CodeUtils\CodeExampleDemoUtils.vb" />
     <Compile Include="CodeUtils\ExampleFinder.vb" />
@@ -188,6 +186,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Documents\Document.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Documents\FormControls.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">

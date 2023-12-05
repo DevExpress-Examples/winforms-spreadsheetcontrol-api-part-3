@@ -104,7 +104,7 @@ Namespace SpreadsheetControl_API_Part03
         End Function
     End Class
 
-'#Region "RichEditCSExampleCodeEvaluator"
+#Region "RichEditCSExampleCodeEvaluator"
     Public Class RichEditCSExampleCodeEvaluator
         Inherits SpreadsheetControl_API_Part03.RichEditExampleCodeEvaluator
 
@@ -137,8 +137,8 @@ Namespace SpreadsheetControl_API_Part03
         End Property
     End Class
 
-'#End Region
-'#Region "RichEditVbExampleCodeEvaluator"
+#End Region
+#Region "RichEditVbExampleCodeEvaluator"
     Public Class RichEditVbExampleCodeEvaluator
         Inherits SpreadsheetControl_API_Part03.RichEditExampleCodeEvaluator
 
@@ -171,7 +171,7 @@ Namespace SpreadsheetControl_API_Part03
         End Property
     End Class
 
-'#End Region
+#End Region
     Public MustInherit Class ExampleEvaluatorByTimer
         Implements System.IDisposable
 
@@ -197,7 +197,7 @@ Namespace SpreadsheetControl_API_Part03
             Me.New(True)
         End Sub
 
-'#Region "Events"
+#Region "Events"
         Public Event QueryEvaluate As SpreadsheetControl_API_Part03.CodeEvaluationEventHandler
 
         Protected Friend Overridable Function RaiseQueryEvaluate() As CodeEvaluationEventArgs
@@ -222,7 +222,7 @@ Namespace SpreadsheetControl_API_Part03
             RaiseEvent OnAfterCompile(Me, New SpreadsheetControl_API_Part03.OnAfterCompileEventArgs() With {.Result = result})
         End Sub
 
-'#End Region
+#End Region
         Public Sub CompileExample(ByVal sender As Object, ByVal e As System.EventArgs)
             If Not Me.compileComplete Then Return
             Dim args As SpreadsheetControl_API_Part03.CodeEvaluationEventArgs = Me.RaiseQueryEvaluate()
@@ -263,7 +263,7 @@ Namespace SpreadsheetControl_API_Part03
         End Sub
     End Class
 
-'#Region "RichEditExampleEvaluatorByTimer"
+#Region "RichEditExampleEvaluatorByTimer"
     Public Class RichEditExampleEvaluatorByTimer
         Inherits SpreadsheetControl_API_Part03.ExampleEvaluatorByTimer
 
@@ -277,8 +277,8 @@ Namespace SpreadsheetControl_API_Part03
         End Function
     End Class
 
-'#End Region
-'#Region "LeakSafeCompileEventRouter"
+#End Region
+#Region "LeakSafeCompileEventRouter"
     Public Class LeakSafeCompileEventRouter
 
         Private ReadOnly weakControlRef As System.WeakReference
@@ -317,5 +317,5 @@ Namespace SpreadsheetControl_API_Part03
     End Class
 
     Public Delegate Sub OnAfterCompileEventHandler(ByVal sender As Object, ByVal e As SpreadsheetControl_API_Part03.OnAfterCompileEventArgs)
-'#End Region
+#End Region
 End Namespace

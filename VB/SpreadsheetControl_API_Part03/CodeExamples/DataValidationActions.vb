@@ -8,7 +8,7 @@ Namespace SpreadsheetControl_API_Part03
     Public Module DataValidationActions
 
         Private Sub AddDataValidation(ByVal workbook As DevExpress.Spreadsheet.IWorkbook)
-'#Region "#AddDataValidation"
+#Region "#AddDataValidation"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As DevExpress.Spreadsheet.Worksheet = workbook.Worksheets(0)
             worksheet(CStr(("C1"))).SetValue(System.DateTime.Now)
@@ -35,11 +35,11 @@ Namespace SpreadsheetControl_API_Part03
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(CInt((i))).Range.FillColor = System.Drawing.Color.FromArgb(MyColorScheme(i))
             Next
-'#End Region  ' #AddDataValidation
+#End Region  ' #AddDataValidation
         End Sub
 
         Private Sub ChangeCriteria(ByVal workbook As DevExpress.Spreadsheet.IWorkbook)
-'#Region "#ChangeCriteria"
+#Region "#ChangeCriteria"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As DevExpress.Spreadsheet.Worksheet = workbook.Worksheets(0)
             ' Restrict data entry to a number within limits.
@@ -54,11 +54,11 @@ Namespace SpreadsheetControl_API_Part03
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(CInt((i))).Range.FillColor = System.Drawing.Color.FromArgb(MyColorScheme(i))
             Next
-'#End Region  ' #ChangeCriteria
+#End Region  ' #ChangeCriteria
         End Sub
 
         Private Sub UseUnionRange(ByVal workbook As DevExpress.Spreadsheet.IWorkbook)
-'#Region "#UseUnionRange"
+#Region "#UseUnionRange"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As DevExpress.Spreadsheet.Worksheet = workbook.Worksheets(0)
             ' Create a union range.
@@ -70,11 +70,11 @@ Namespace SpreadsheetControl_API_Part03
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(CInt((i))).Range.FillColor = System.Drawing.Color.FromArgb(MyColorScheme(i))
             Next
-'#End Region  ' #UseUnionRange
+#End Region  ' #UseUnionRange
         End Sub
 
         Private Sub ShowInputMessage(ByVal workbook As DevExpress.Spreadsheet.IWorkbook)
-'#Region "#ShowInputMessage"
+#Region "#ShowInputMessage"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As DevExpress.Spreadsheet.Worksheet = workbook.Worksheets(0)
             ' Restrict data entry to a 5-digit number
@@ -88,11 +88,11 @@ Namespace SpreadsheetControl_API_Part03
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(CInt((i))).Range.FillColor = System.Drawing.Color.FromArgb(MyColorScheme(i))
             Next
-'#End Region  ' #ShowInputMessage
+#End Region  ' #ShowInputMessage
         End Sub
 
         Private Sub ShowErrorMessage(ByVal workbook As DevExpress.Spreadsheet.IWorkbook)
-'#Region "#ShowErrorMessage"
+#Region "#ShowErrorMessage"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As DevExpress.Spreadsheet.Worksheet = workbook.Worksheets(0)
             ' Restrict data entry to a 5-digit number.
@@ -107,11 +107,11 @@ Namespace SpreadsheetControl_API_Part03
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(CInt((i))).Range.FillColor = System.Drawing.Color.FromArgb(MyColorScheme(i))
             Next
-'#End Region  ' #ShowErrorMessage
+#End Region  ' #ShowErrorMessage
         End Sub
 
         Private Sub GetDataValidation(ByVal workbook As DevExpress.Spreadsheet.IWorkbook)
-'#Region "#GetDataValidation"
+#Region "#GetDataValidation"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As DevExpress.Spreadsheet.Worksheet = workbook.Worksheets(0)
             ' Add data validations.
@@ -120,7 +120,7 @@ Namespace SpreadsheetControl_API_Part03
             ' Get data validation entry associated with a particular cell.
             worksheet.DataValidations.GetDataValidation(CType((worksheet.Cells(CStr(("E4")))), DevExpress.Spreadsheet.Cell)).Criteria = DevExpress.Spreadsheet.ValueObject.FromRange(worksheet("H4:H5"))
             ' Get data validation entries for the specified range.
-            Dim myValidation = worksheet.DataValidations.GetDataValidations(worksheet("D4:E11")).SingleOrDefault(Function(d) d.ValidationType = DevExpress.Spreadsheet.DataValidationType.TextLength)
+            Dim myValidation = worksheet.DataValidations.GetDataValidations(worksheet("D4:E11")).Where(Function(d) d.ValidationType = DevExpress.Spreadsheet.DataValidationType.TextLength).SingleOrDefault()
             If myValidation IsNot Nothing Then myValidation.Criteria = 4
             ' Get data validation entries that meet certain criteria.
             For Each d In worksheet.DataValidations.GetDataValidations(DevExpress.Spreadsheet.DataValidationType.TextLength, DevExpress.Spreadsheet.DataValidationOperator.Equal, 4, DevExpress.Spreadsheet.ValueObject.Empty)
@@ -134,11 +134,11 @@ Namespace SpreadsheetControl_API_Part03
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(CInt((i))).Range.FillColor = System.Drawing.Color.FromArgb(MyColorScheme(i))
             Next
-'#End Region  ' #GetDataValidation
+#End Region  ' #GetDataValidation
         End Sub
 
         Private Sub ValidateCellValue(ByVal workbook As DevExpress.Spreadsheet.IWorkbook)
-'#Region "#ValidateCellValue"
+#Region "#ValidateCellValue"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As DevExpress.Spreadsheet.Worksheet = workbook.Worksheets(0)
             ' Add data validations.
@@ -148,11 +148,11 @@ Namespace SpreadsheetControl_API_Part03
             If isValid Then
                 worksheet(CStr(("D4"))).CopyFrom(worksheet("J4"))
             End If
-'#End Region  ' #ValidateCellValue
+#End Region  ' #ValidateCellValue
         End Sub
 
         Private Sub RemoveDataValidation(ByVal workbook As DevExpress.Spreadsheet.IWorkbook)
-'#Region "#RemoveDataValidation"
+#Region "#RemoveDataValidation"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As DevExpress.Spreadsheet.Worksheet = workbook.Worksheets(0)
             ' Add data validations.
@@ -165,11 +165,11 @@ Namespace SpreadsheetControl_API_Part03
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(CInt((i))).Range.FillColor = System.Drawing.Color.FromArgb(MyColorScheme(i))
             Next
-'#End Region  ' #RemoveDataValidation
+#End Region  ' #RemoveDataValidation
         End Sub
 
         Private Sub RemoveAllDataValidations(ByVal workbook As DevExpress.Spreadsheet.IWorkbook)
-'#Region "#RemoveAllDataValidations"
+#Region "#RemoveAllDataValidations"
             workbook.LoadDocument("Documents\DataValidation.xlsx")
             Dim worksheet As DevExpress.Spreadsheet.Worksheet = workbook.Worksheets(0)
             ' Add data validations.
@@ -182,7 +182,7 @@ Namespace SpreadsheetControl_API_Part03
             For i As Integer = 0 To worksheet.DataValidations.Count - 1
                 worksheet.DataValidations(CInt((i))).Range.FillColor = System.Drawing.Color.FromArgb(MyColorScheme(i))
             Next
-'#End Region  ' #RemoveAllDataValidations
+#End Region  ' #RemoveAllDataValidations
         End Sub
     End Module
 End Namespace

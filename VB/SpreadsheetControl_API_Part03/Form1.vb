@@ -21,7 +21,7 @@ Namespace SpreadsheetControl_API_Part03
 
         Private verticalSplitContainerControl1 As SplitContainerControl
 
-'#Region "Controls"
+#Region "Controls"
         Private treeList1 As TreeList
 
         Private xtraTabControl1 As XtraTabControl
@@ -36,8 +36,8 @@ Namespace SpreadsheetControl_API_Part03
 
         Private richEditControlVB As RichEditControl
 
-'#End Region
-'#Region "InitializeComponent"
+#End Region
+#Region "InitializeComponent"
         Private Sub InitializeComponent()
             horizontalSplitContainerControl1 = New SplitContainerControl()
             xtraTabControl1 = New XtraTabControl()
@@ -249,7 +249,7 @@ Namespace SpreadsheetControl_API_Part03
             Me.ResumeLayout(False)
         End Sub
 
-'#End Region
+#End Region
         Private codeExampleNameLbl As LabelControl
 
         Private codeEditor As ExampleCodeEditor
@@ -309,14 +309,14 @@ Namespace SpreadsheetControl_API_Part03
         End Property
 
         Private Sub ShowExamplesInTreeList(ByVal treeList As TreeList, ByVal examples As List(Of CodeExampleGroup))
-'#Region "InitializeTreeList"
+#Region "InitializeTreeList"
             treeList.OptionsPrint.UsePrintStyles = True
             AddHandler treeList.FocusedNodeChanged, New FocusedNodeChangedEventHandler(AddressOf OnNewExampleSelected)
             treeList.OptionsView.ShowColumns = False
             treeList.OptionsView.ShowIndicator = False
             AddHandler treeList.VirtualTreeGetChildNodes, AddressOf treeList_VirtualTreeGetChildNodes
             AddHandler treeList.VirtualTreeGetCellValue, AddressOf treeList_VirtualTreeGetCellValue
-'#End Region
+#End Region
             Dim col1 As TreeListColumn = New TreeListColumn()
             col1.VisibleIndex = 0
             col1.OptionsColumn.AllowEdit = False
